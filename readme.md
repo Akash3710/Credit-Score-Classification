@@ -1,43 +1,55 @@
 Credit Score Classification
 
-This project aims to classify individuals into credit score categories (Good, Standard, Poor) based on their financial and demographic attributes. By applying data cleaning, feature extraction, encoding, and machine learning models, we can predict the creditworthiness of a person.
+This project aims to classify individuals into credit score categories (Good, Standard, Poor) using financial and demographic attributes. The goal is to predict a person’s creditworthiness through effective data preprocessing, feature extraction, encoding, and machine learning models.
 
 Project Workflow
 1. Data Cleaning & Preprocessing
 
-Handled missing values using mean/median  for numerical columns and mode for categorical columns.
+Handled missing values using mean/median imputation for numerical features and mode imputation for categorical features.
 
-Detected and treated outliers in income, debt, and balance columns.
+Detected and treated outliers in key variables such as Annual Income, Outstanding Debt, and Monthly Balance.
 
-Converted date columns into usable formats (if applicable).
+Converted date-related columns into usable formats where applicable.
 
 2. Exploratory Data Analysis (EDA)
 
-Distribution analysis of key features like Annual Income, Outstanding Debt, Monthly Balance.
+Analyzed distributions of important numerical features including Annual Income, Outstanding Debt, and Monthly Balance.
 
-Correlation heatmap to understand relationships between variables.
+Used a correlation heatmap to examine relationships between variables.
 
-Plots for categorical features (Occupation, Credit Mix, Payment Behavior).
+Visualized categorical features such as Occupation, Credit Mix, and Payment Behaviour.
 
-Insights: Higher income and balanced debt ratios are strongly linked with good credit scores.
+Insight: Higher income levels and balanced debt ratios are strongly associated with Good credit scores.
 
 3. Feature Extraction
 
-Categorical Encoding:
+Categorical Encoding
 
-Used Label Encoding for ordinal variables like Credit_Mix.
+Applied Label Encoding for ordinal features like Credit_Mix.
 
-Used One-Hot Encoding for nominal variables like Occupation, Payment_Behaviour.
+Used One-Hot Encoding for nominal features such as Occupation and Payment_Behaviour.
 
-Feature Scaling: Applied StandardScaler on numerical features (e.g., Annual_Income, Outstanding_Debt, Monthly_Balance) to bring them to the same scale.
+Feature Scaling
 
-Feature Engineering: Created derived features such as spending level and payment value from payment behaviour
+Applied StandardScaler to numerical features (Annual_Income, Outstanding_Debt, Monthly_Balance) to maintain uniform scale.
 
-Target Encoding: Converted Credit_Score into numeric classes (Good → 2, Standard → 1, Poor → 0).
+Feature Engineering
+
+Created derived features such as spending level and payment value from payment behaviour data.
+
+Target Encoding
+
+Converted Credit_Score into numeric classes:
+
+Good → 2
+
+Standard → 1
+
+Poor → 0
 
 4. Model Building & Training
 
-Split data into train-test sets.
+Split the dataset into training and testing sets.
 
 Trained multiple classification models:
 
@@ -49,13 +61,12 @@ Random Forest
 
 XGBoost
 
-
 5. Model Evaluation
 
-Metrics used:  F1-score
+Evaluated models using F1-score.
 
-Best performing model: XGBoost, due to its ability to handle imbalanced and complex financial data.
+Best Performing Model: XGBoost, due to its effectiveness in handling complex and imbalanced financial data.
 
-📈 Results
+Results
 
-F1- score = 0.75
+F1-score: 0.75
